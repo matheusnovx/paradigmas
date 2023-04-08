@@ -1,0 +1,42 @@
+(setf tabuleiro (make-array '(7 7)
+   :initial-contents '(
+       (3 0 2 0 0 1 2) 
+       (0 0 0 0 0 0 0) 
+       (0 0 0 0 0 0 5) 
+       (0 0 0 0 0 0 1)
+       (0 0 0 0 1 0 0)
+       (0 0 0 0 0 0 4)
+       (0 4 0 0 0 0 0)
+       ))
+)
+
+(setf tabuleiro2 (make-array '(7 7)
+   :initial-contents '(
+       (3 0 2 0 0 1 2) 
+       (0 0 0 0 0 0 0) 
+       (0 0 0 0 0 0 5) 
+       (0 0 0 0 0 0 1)
+       (0 0 0 0 1 0 0)
+       (0 0 0 0 0 0 4)
+       (0 4 0 0 0 0 0)
+       ))
+)
+
+(setf regioes (make-array '(7 7)
+   :initial-contents '(
+       (0 0 0 0 1 1 1) 
+       (0 2 2 2 3 1 1) 
+       (4 2 2 3 3 3 5) 
+       (4 4 4 6 3 5 5)
+       (4 8 6 6 6 5 5)
+       (7 8 8 6 9 9 9)
+       (7 8 8 9 9 10 10)
+       ))
+)
+
+(defun main()
+    (write-line (write-to-string (equalp tabuleiro regioes)))
+    (write-line (write-to-string (equalp tabuleiro tabuleiro2)))
+)
+
+(main)
